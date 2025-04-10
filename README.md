@@ -22,25 +22,12 @@ Clone the repository and install dependencies to a virtual environment:
 
 ```console
 # Linux/macOS
-cd voice-pipeline-agent-python
+cd lk-agent
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 python3 agent.py download-files
 ```
-
-<details>
-  <summary>Windows instructions (click to expand)</summary>
-  
-```cmd
-:: Windows (CMD/PowerShell)
-cd voice-pipeline-agent-python
-python3 -m venv venv
-venv\Scripts\activate
-pip install -r requirements.txt
-```
-</details>
-
 
 Set up the environment by copying `.env.example` to `.env.local` and filling in the required values:
 
@@ -64,3 +51,16 @@ python3 agent.py dev
 ```
 
 This agent requires a frontend application to communicate with. You can use one of our example frontends in [livekit-examples](https://github.com/livekit-examples/), create your own following one of our [client quickstarts](https://docs.livekit.io/realtime/quickstarts/), or test instantly against one of our hosted [Sandbox](https://cloud.livekit.io/projects/p_/sandbox) frontends.
+
+# Use chatbot with RAG
+# download document for chatbot
+python3 downloader.py --name magingam --urls https://magingam.vn/
+
+# Change document name in chatbot_agent.py
+CHATBOT_NAME = "magingam"
+
+Run the agent:
+
+```console
+python3 chatbot_agent.py dev
+```

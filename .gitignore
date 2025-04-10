@@ -7,3 +7,10 @@ temp/
 
 # ignore venv folder
 venv/
+
+# ignore document_chatbot folder
+document_chatbot/
+
+
+# ignore chatbot-knowledge-storage folder
+chatbot-knowledge-storage/
