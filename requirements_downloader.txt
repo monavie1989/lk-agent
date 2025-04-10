@@ -1,0 +1,12 @@
+python-magic==0.4.27
+bs4==0.0.2
+janome
+pyspellchecker==0.8.1
+playwright
+Flask==3.0.3
+crochet==2.1.1
+aiohttp
+llama-index
+typing
+lxml
+argparse

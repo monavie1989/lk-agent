@@ -1,0 +1,21 @@
+{
+    "text/html": ".html",
+    "text/plain": ".txt",
+    "text/csv": ".csv",
+    "application/vnd.openxmlformats-officedocument.wordprocessingml.document": ".docx",
+    "application/msword": ".doc",
+    "application/epub+zip": ".epub",
+    "application/x-hwp": ".hwp",
+    "application/x-ipynb+json": ".ipynb",
+    "image/jpeg": ".jpeg, .jpg",
+    "application/mbox": ".mbox",
+    "text/markdown": ".md",
+    "audio/mpeg": ".mp3",
+    "video/mp4": ".mp4",
+    "application/pdf": ".pdf",
+    "image/png": ".png",
+    "application/vnd.ms-powerpoint": ".ppt",
+    "application/vnd.ms-powerpoint.presentation.macroEnabled.12": ".pptm",
+    "application/vnd.openxmlformats-officedocument.presentationml.presentation": ".pptx",
+    "application/json": ".json"
+}
