@@ -64,3 +64,26 @@ Run the agent:
 ```console
 python3 chatbot_agent.py dev
 ```
+
+# run agent in background mode
+# install supervisord
+# create supervisord config
+```console
+sudo vi /etc/supervisor/conf.d/lk-agent.conf
+```
+[program:lk-agent]
+directory=/var/www/livekit/lk-agent
+command=/var/www/livekit/lk-agent/venv/bin/python chatbot_agent_toyota.py dev
+autostart=true
+autorestart=false
+stopasgroup=true
+killasgroup=true
+stderr_logfile=/var/log/lk-agent.err.log
+stdout_logfile=/var/log/lk-agent.out.log
+environment=PYTHONUNBUFFERED=1,HOME="/home/ubuntu"
+
+
+```console
+sudo supervisorctl reread
+sudo supervisorctl update
+```
