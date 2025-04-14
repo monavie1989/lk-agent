@@ -96,7 +96,7 @@ async def entrypoint(ctx: JobContext):
         vad=ctx.proc.userdata["vad"],
         stt=deepgram.STT(),
         llm=combined_llm,
-        tts=cartesia.TTS(),
+        tts=openai.TTS(model="tts-1",voice="nova"),
         # use LiveKit's transformer-based turn detector
         turn_detector=turn_detector.EOUModel(),
         # minimum delay for endpointing, used when turn detector believes the user is done with their turn
