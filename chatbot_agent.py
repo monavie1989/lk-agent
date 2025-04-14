@@ -37,15 +37,18 @@ logger = logging.getLogger("voice-agent")
 
 
 # Initialize RAG components
-CHATBOT_NAME = "magingam"
+CHATBOT_NAME = "tokyotaja"
 CHATBOT_DIR = f"document_chatbot/{CHATBOT_NAME}"
 PERSIST_DIR = f"./chatbot-knowledge-storage/{CHATBOT_NAME}"
 INITIAL_SYSTEM_CONTEXT = (
-    "You are a voice assistant created by Magin Gam company. Your interface with users will be voice."
-    "You will assist in introducing information and services related to the company"
-    "You should use short and concise answers, and avoid using unpronounceable punctuation."
+    "あなたは法人向けのカジュアル面談で使われる音声アシスタントです。"
+    "話し方はやわらかく親しみやすく、丁寧すぎない自然なトーンにしてください。"
+    "ユーザーとは音声でやり取りします。"
+    "応答は短くシンプルにまとめ、聞き取りやすさを大切にしてください。"
+    "句読点や言いにくい言葉は避け、スムーズに話せる表現を選んでください。"
+    "この面談はデモです。リラックスした雰囲気で、あなたのサポート力を伝えてください。"
 )
-INITITAL_MESSAGE = "Hey, how can I help you today?"
+INITITAL_MESSAGE = "こんにちは。本日はカジュアル面談にご参加いただき、ありがとうございます。何かお手伝いできることがあれば教えてくださいね。"
 
 if not os.path.exists(PERSIST_DIR):
     # Load dental knowledge documents and create index
