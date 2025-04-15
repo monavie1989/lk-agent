@@ -37,7 +37,7 @@ logger = logging.getLogger("voice-agent")
 
 
 # Initialize RAG components
-CHATBOT_NAME = "tokyotaja"
+CHATBOT_NAME = "toyotaja"
 CHATBOT_DIR = f"document_chatbot/{CHATBOT_NAME}"
 PERSIST_DIR = f"./chatbot-knowledge-storage/{CHATBOT_NAME}"
 INITIAL_SYSTEM_CONTEXT = (
